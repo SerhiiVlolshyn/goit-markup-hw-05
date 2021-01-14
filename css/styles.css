@@ -104,6 +104,9 @@ nav .current {
   color: var(--pointer);
 }
 
+nav .current::after {
+}
+
 nav {
   font-weight: 500;
 }
@@ -491,14 +494,34 @@ button.inactive {
 
 .work-list li {
   margin-left: var(--standard-margin);
+  position: relative;
 }
 
 .work-list img {
+  display: block;
   width: 370px;
 }
 
 .work-list li:first-child {
   margin-left: 0;
+}
+
+.worklist-underscription {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+
+  font-weight: bold;
+  font-size: 14px;
+  text-align: center;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--white-color);
+
+  padding: 27px 0;
+
+  background-color: rgba(47, 48, 58, 0.8);
 }
 
 .team {
@@ -757,4 +780,45 @@ button.inactive {
 .portfolio-item-link:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+
+.portfolio-image {
+  position: relative;
+  widows: 370px;
+  height: 294px;
+  margin-left: 0;
+  margin-bottom: 0;
+
+  overflow: hidden;
+}
+
+.portfolio-item-link:focus .portfolio-image-description,
+.portfolio-item-link:hover .portfolio-image-description {
+  transform: translateY(0);
+}
+
+.portfolio-image-description {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(33, 150, 243, 0.9);
+
+  font-size: 18px;
+  line-height: 1.56;
+
+  letter-spacing: 0.03em;
+
+  color: var(--white-color);
+
+  transform: translatey(100%);
+  transition: transform 250ms ease;
+}
+
+.portfolio-description-innerheit {
+  position: absolute;
+  top: 50%;
+  left: 13%;
+  transform: translate(-7%, -50%);
 }
