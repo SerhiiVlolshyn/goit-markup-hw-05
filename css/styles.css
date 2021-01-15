@@ -105,6 +105,14 @@ nav .current {
 }
 
 nav .current::after {
+  position: absolute;
+  bottom: -1px;
+  border-radius: 2px;
+  content: '';
+  display: block;
+  width: 100%;
+  height: 4px;
+  background-color: var(--logo-color);
 }
 
 nav {
@@ -151,6 +159,8 @@ header .logo {
   text-decoration: none;
   padding-top: 32px;
   padding-bottom: 32px;
+
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .studio-link {
@@ -223,6 +233,8 @@ footer ul {
 footer a {
   color: var(--footer-link-color);
   text-decoration: none;
+
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer-container {
@@ -268,6 +280,8 @@ footer address {
   display: block;
   margin-top: 20px;
   margin-right: 10px;
+
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .social-nets-logos .social-icon:last-child {
@@ -324,6 +338,8 @@ footer address {
 .contacts a {
   color: var(--regular-text-color);
   text-decoration: none;
+
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* позиционирование над элементом */
@@ -340,6 +356,10 @@ a:focus {
   border-radius: 4px;
   border: 0;
   cursor: pointer;
+
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 button[type='button'] {
@@ -350,6 +370,10 @@ button[type='button'] {
   text-align: center;
   border-radius: 4px;
   border: 0;
+
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 button[name='works-filter'] {
@@ -606,6 +630,9 @@ button.inactive {
   display: flex;
   align-items: center;
   justify-content: center;
+
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .team-social-icon {
@@ -643,6 +670,9 @@ button.inactive {
   display: flex;
   justify-content: center;
   align-items: center;
+
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .client-list li + li {
@@ -774,6 +804,8 @@ div .modal {
 .portfolio-item-link {
   display: block;
   width: 370px;
+
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .portfolio-item:first-child {
@@ -855,7 +887,7 @@ div .modal {
   color: var(--white-color);
 
   transform: translatey(100%);
-  transition: transform 250ms ease;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .portfolio-description-innerheit {
