@@ -68,6 +68,9 @@ img {
   --vertical-distance: 94px;
   --common-margin-top: 50px;
   --site-width: 1200px;
+
+  --standard-reaction-time: 250ms;
+  --standard-cubic-bezier: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* глобальные значения */
@@ -164,7 +167,7 @@ header .logo {
   padding-top: 32px;
   padding-bottom: 32px;
 
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color var(--standard-reaction-time) var(--standard-cubic-bezier);
 }
 
 .studio-link {
@@ -238,7 +241,7 @@ footer a {
   color: var(--footer-link-color);
   text-decoration: none;
 
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color var(--standard-reaction-time) var(--standard-cubic-bezier);
 }
 
 .footer-container {
@@ -285,7 +288,8 @@ footer address {
   margin-top: 20px;
   margin-right: 10px;
 
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color var(--standard-reaction-time)
+    var(--standard-cubic-bezier);
 }
 
 .social-nets-logos .social-icon:last-child {
@@ -343,7 +347,7 @@ footer address {
   color: var(--regular-text-color);
   text-decoration: none;
 
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color var(--standard-reaction-time) var(--standard-cubic-bezier);
 }
 
 /* позиционирование над элементом */
@@ -361,9 +365,10 @@ a:focus {
   border: 0;
   cursor: pointer;
 
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color var(--standard-reaction-time)
+      var(--standard-cubic-bezier),
+    color var(--standard-reaction-time) var(--standard-cubic-bezier),
+    box-shadow var(--standard-reaction-time) var(--standard-cubic-bezier);
 }
 
 button[type='button'] {
@@ -375,9 +380,10 @@ button[type='button'] {
   border-radius: 4px;
   border: 0;
 
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color var(--standard-reaction-time)
+      var(--standard-cubic-bezier),
+    color var(--standard-reaction-time) var(--standard-cubic-bezier),
+    box-shadow var(--standard-reaction-time) var(--standard-cubic-bezier);
 }
 
 button[name='works-filter'] {
@@ -635,8 +641,9 @@ button.inactive {
   align-items: center;
   justify-content: center;
 
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color var(--standard-reaction-time)
+      var(--standard-cubic-bezier),
+    color var(--standard-reaction-time) var(--standard-cubic-bezier);
 }
 
 .team-social-icon {
@@ -675,8 +682,8 @@ button.inactive {
   justify-content: center;
   align-items: center;
 
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color var(--standard-reaction-time) var(--standard-cubic-bezier),
+    border-color var(--standard-reaction-time) var(--standard-cubic-bezier);
 }
 
 .client-list li + li {
@@ -740,7 +747,7 @@ button.inactive {
 
   background-color: rgba(0, 0, 0, 0.2);
 
-  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: opacity var(--standard-reaction-time) var(--standard-cubic-bezier);
 }
 
 .backdrop.is-hidden {
@@ -750,20 +757,22 @@ button.inactive {
 }
 
 .modal {
-  width: 528px;
-  height: 581px;
-
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+
+  width: 528px;
+  height: 581px;
 
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
   background-color: var(--main-bg-color);
 
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transform: translate(-50%, -50%);
+  transition: transform var(--standard-reaction-time)
+      var(--standard-cubic-bezier),
+    visibility var(--standard-reaction-time) var(--standard-cubic-bezier);
 }
 
 .modal-close-button {
@@ -776,7 +785,7 @@ button.inactive {
   height: 30px;
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
-  background-color: #fff;
+  background-color: var(--white-color);
 
   cursor: pointer;
 }
@@ -826,7 +835,8 @@ button.inactive {
   display: block;
   width: 370px;
 
-  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: box-shadow var(--standard-reaction-time)
+    var(--standard-cubic-bezier);
 }
 
 .portfolio-item:first-child {
@@ -908,7 +918,8 @@ button.inactive {
   color: var(--white-color);
 
   transform: translatey(100%);
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform var(--standard-reaction-time)
+    var(--standard-cubic-bezier);
 }
 
 .portfolio-description-innerheit {
