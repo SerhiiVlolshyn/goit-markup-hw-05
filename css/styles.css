@@ -244,11 +244,6 @@ footer a {
   transition: color var(--standard-reaction-time) var(--standard-cubic-bezier);
 }
 
-.footer-container {
-  width: 231px;
-  padding-left: 15px;
-}
-
 .footer-address {
   margin-top: 20px;
   line-height: 1.71;
@@ -276,6 +271,7 @@ footer address {
 
 .social-nets-logos {
   display: flex;
+  margin-top: 20px;
 }
 
 .social-nets-logos .social-icon {
@@ -284,15 +280,15 @@ footer address {
   border-radius: 50%;
   background-color: rgba(255, 255, 255, 0.1);
 
-  display: block;
-  margin-top: 20px;
-  margin-right: 10px;
-
   transition: background-color var(--standard-reaction-time)
     var(--standard-cubic-bezier);
 }
 
-.social-nets-logos .social-icon:last-child {
+.social-nets-logos li {
+  margin-right: 10px;
+}
+
+.social-nets-logos li:last-child {
   margin-right: 0;
 }
 
@@ -574,7 +570,7 @@ button.inactive {
   justify-content: center;
 }
 
-.team li {
+.team-list > li {
   margin-left: var(--standard-margin);
   background-color: #ffffff;
   width: var(--standard-width);
@@ -590,7 +586,7 @@ button.inactive {
 
 .team .team-container {
   width: var(--standard-width);
-  padding: 30px 0;
+  padding: 30px 32px;
   display: flex;
   flex-direction: column;
 }
@@ -599,8 +595,10 @@ button.inactive {
 .team h3 {
   margin: 0 auto;
 }
+
 .team p {
   margin-top: 10px;
+  color: var(--regular-text-color);
 }
 
 .advantages-list,
@@ -622,12 +620,16 @@ button.inactive {
 }
 
 .team-social-container {
-  padding: 16px 32px 0 32px;
+  margin-top: 16px;
   display: flex;
 }
 
-.team-social-item + .team-social-item {
-  margin-left: auto;
+.team-social-container ul {
+  display: flex;
+}
+
+.team-social-container li {
+  margin-left: 10px;
 }
 
 .team-social-item {
