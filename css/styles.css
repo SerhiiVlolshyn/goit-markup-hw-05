@@ -185,17 +185,21 @@ header .logo {
   margin-left: var(--margin-header);
 }
 
-.header-mail {
+.header-mail .header-link {
   margin-top: auto;
   margin-bottom: auto;
   fill: var(--regular-text-color);
+
+  fill: currentColor;
 }
 
-.header-tel {
+.header-tel .header-link {
   margin-left: 30px;
   margin-top: auto;
   margin-bottom: auto;
   fill: var(--regular-text-color);
+
+  fill: currentColor;
 }
 
 .header-contacts-icon {
@@ -204,8 +208,6 @@ header .logo {
   width: 16px;
   margin: auto 10px;
   margin-left: 0;
-
-  fill: currentColor;
 }
 
 .contacts.header-element {
@@ -303,6 +305,9 @@ footer address {
 .footer-social .social-icon-item {
   width: 20px;
   height: 20px;
+}
+
+.footer-social .social-icon {
   fill: var(--social-links-footer);
 }
 
@@ -638,6 +643,7 @@ button.inactive {
   border-radius: 50%;
   background-color: var(--white-color);
   color: var(--icon-inactive);
+  fill: currentColor;
 
   display: flex;
   align-items: center;
@@ -651,7 +657,6 @@ button.inactive {
 .team-social-icon {
   width: 20px;
   height: 20px;
-  fill: currentColor;
 }
 
 .team-social-item:hover,
@@ -679,6 +684,7 @@ button.inactive {
   height: 90px;
   border: 1px solid var(--icon-inactive);
   border-radius: 4px;
+  fill: currentColor;
 
   display: flex;
   justify-content: center;
@@ -720,10 +726,6 @@ button.inactive {
 .client-six .client-icon {
   width: 88.48px;
   height: 90px;
-}
-
-.client-list .client-icon {
-  fill: currentColor;
 }
 
 .client-list .clients-link:visited {
@@ -835,7 +837,7 @@ button.inactive {
 
 .portfolio-item-link {
   display: block;
-  width: 370px;
+  width: 100%;
 
   transition: box-shadow var(--standard-reaction-time)
     var(--standard-cubic-bezier);
@@ -919,7 +921,7 @@ button.inactive {
 
   color: var(--white-color);
 
-  transform: translatey(100%);
+  transform: translatey(101%);
   transition: transform var(--standard-reaction-time)
     var(--standard-cubic-bezier);
 }
